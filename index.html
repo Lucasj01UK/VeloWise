@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VeloWise.cc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/57b4dd3693.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="VeloWise.cc - The UK's most comprehensive database of British bikes, clothing, insurance, accessories and nutrition.">
+  <meta name="keywords" content="british, cycling, brands, british bikes, british brands, british cycling brands, road cycling,mountain biking, bike packing, cyclecross">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="favicon.ico">
+  <!--<script data-ad-client="ca-pub-6699362050131330" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+</head>
+
+<body onload="getBikes()">
+
+  <!-- Navbar Large screens (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-btn w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-btn">HOME</a>
+      <a href="#findBrands" class="w3-bar-item w3-btn w3-hide-small">FIND BRANDS</a>
+      <a href="#articles" class="w3-bar-item w3-btn w3-hide-small">ARTICLES</a>
+      <a href="#about" class="w3-bar-item w3-btn w3-hide-small">ABOUT</a>
+      <!-- <a href="#about" class="w3-bar-item w3-btn w3-hide-small">ABOUT</a> -->
+
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#findBrands" class="w3-bar-item w3-btn" onclick="toggleFunction()">Find Brands</a>
+      <a href="#articles" class="w3-bar-item w3-btn" onclick="toggleFunction()">Articles</a>
+      <a href="#about" class="w3-bar-item w3-btn" onclick="toggleFunction()">About</a>
+      <!-- <a href="#about" class="w3-bar-item w3-btn" onclick="toggleFunction()">About</a> -->
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container" id="home">  
+    <div class="w3-display-middle w3-center" style="white-space:nowrap;">
+      <h1><span class="w3-wide w3-animate-opacity w3-text-white">Velo<span class="wiseColour">Wise</span>.cc</span></h1>
+      <h4 class="tagLine w3-animate-opacity w3-mobile w3-hide-small w3-hide-medium">Welcome to Velo<span
+          class="wiseColour">Wise</span>.cc | The most comprehensive Database of UK
+        cycling-specific companies.</h4>
+      <h4 class="tagLine w3-animate-opacity w3-hide-small">Building brand awareness for the cycling community.</h4>
+    </div>
+  </div>
+
+  <div class="w3-display-container w3-center">
+    <!-- Mobile Tagline -->
+    <div class="w3-display">
+      <h5 class="tagLine w3-animate-opacity w3-mobile w3-hide-large" style="margin:0; background-color: #303030;">
+        Welcome to Velo<span class="wiseColour">Wise</span>.cc | The most comprehensive Database of UK
+        cycling-specific companies.</h5>
+      <h5 class="tagLine w3-animate-opacity w3-mobile w3-hide-large" style="margin:0; background-color: #303030;">
+        Building brand awareness for the cycling
+        community.</h5>
+    </div>
+
+    <div class="bgimg-2 w3-display-container" id="findBrands">
+      <div class="w3-display" style="padding-top: 5%;">
+        <div class="w3-bar w3-padding w3-center">
+          <!-- <button id="button1"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile homeBtn">
+            <b>V<span class="wiseColour">W</span>.CC</b></button> -->
+          <button id="button3"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">B</span>ikes</b></button>
+          <button id="button4"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">A</span>ccessories</b></button>
+          <button id="button5"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">C</span>omponents</b></button>
+          <button id="button6"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">C</span>lothing</b></button>
+          <button id="button9"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">N</span>utrition</b></button>
+          <button id="button8"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">I</span>nsurance</b></button>
+          <button id="button2"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+            <b><span class="wiseColour">A</span>ll <span class="wiseColour">B</span>rand</b></button>
+          
+          <!-- <button id="button7"
+            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+           <b><span class="wiseColour">H</span>olidays</b></button> -->
+          <!-- <button id="button10"
+          class="w3-btn w3-white w3-large w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple">
+          <span class="wiseColour">A</span>ssociations</button> -->
+          <!-- <button id="button11"
+          class="w3-btn w3-white w3-large w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple">
+          <span class="wiseColour">E</span>uro <span class="wiseColour">B</span>rands</button>         -->
+          <!-- <hr> -->
+        </div>
+      </div>
+    </div>
+
+    <!--!!! APP.JS STARTS HERE !!!-->
+    <div class="w3-row">
+      <div class="w3-col l2 s12 w3-hide-small" id="ADVERTISMENT">
+        <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- test ads -->
+        <!--<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6699362050131330"-->
+        <!--  data-ad-slot="7152013350" data-ad-format="auto" data-full-width-responsive="true"></ins>-->
+        <!--<script>-->
+        <!--  (adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+      </div>
+
+      <div id="output" class="w3-card w3-border w3-container w3-mobile w3-center w3-col">
+        <!-- app.js -->
+      </div>
+
+      <div class="w3-col l2 s12 w3-hide-small" id="ADVERTISMENT">
+        <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- test ads -->
+        <!--<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6699362050131330"-->
+        <!--  data-ad-slot="7152013350" data-ad-format="auto" data-full-width-responsive="true"></ins>-->
+        <!--<script>-->
+        <!--  (adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+      </div>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <!-- articles -->
+  <div class="w3-row w3-text-black" id="articles">
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-right w3-border-top">
+      <h1><span class="wiseColour">B</span>ikes</h1>
+      <img src="img/newBikes.jpg" class="w3-margin w3-hide-small" alt="bike-img" style="max-width:800px; height:auto;">
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">T</span>here is a vast array of bicycle brands around the globe, and it's hard to
+          get away from the well-established
+          powerhouses. Giant, Specialized and Cannondale are fantastic brands but, you see them everywhere.
+          Riding solo or in a club, spotting another one is almost certain. Seldom you will feast your eyes upon an
+          ORRO, Field or Enigma. These steeds are rare indeed, but can be found at similar prices and are just as
+          reliable, beautiful and
+          obtainable.
+          <a href="#findBrands" type="button" class="wiseColour">Click here</a>
+          to see the biggest list of British Bicycle brands and frame builders.</p>
+      </div>
+    </div>
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-top ">
+      <h1><span class="wiseColour">A</span>ccessories</h1>
+      <img src="img/newAccessories.jpg" class="w3-margin w3-hide-small" alt="acessories-img"
+        style="max-width:800px; height:auto;">
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">C</span>ycling accessories. The essential kit you need to aid your commute, training
+          or race. To
+          make your weekend away in the wilderness more comfortable. The items you must have to separate your bike
+          from the crowd. Accessorising your bike is great fun and can cost very little.
+          <a href="#findBrands" type="button" class="wiseColour">Click
+            here</a> to see the biggest range of British cycling accessories.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row w3-text-black">
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
+      <h1><span class="wiseColour">C</span>omponents</h1>
+      <img src="img/components1.jpg" class="w3-margin w3-hide-small" alt="Person" style="max-width:800px; height:auto;">
+
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">C</span>omponents, critical parts that make the machine. Without them, we are going
+          nowhere.
+          <a href="#findBrands" type="button" class="wiseColour">Here</a> is a list of almost all bicycle components that
+          are owned by British companies.
+          A favourite for us here at VeloWise is HOPE. They truly stand out as market leaders. Almost all their products
+          are made on-site in Barnoldswick, Lancashire. Their products are renowned for being robust, affordable and
+          reliable.
+          A true testament to British engineering.
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-top">
+      <h1><span class="wiseColour">C</span>lothing</h1>
+      <img src="img/newClothing.jpg" class="w3-margin w3-hide-small" alt="Person" style="max-width:800px; height:auto;">
+
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">W</span>hile compiling this list of cycling apparel companies, I was astonished at
+          how many there
+          were, how obscure they are, and how hard it is to pin down where they are based and made. I have found over
+          fifty already with more being added every month. <a href="#findBrands" type="button" class="wiseColour">Click
+            here</a>
+          to see the biggest list of cycling clothing brands based here in the UK.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row w3-text-black">
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
+
+      <h1><span class="wiseColour">I</span>nsurance</h1>
+      <img src="img/newInsurance.jpg" class="w3-margin w3-hide-small" alt="Person"
+        style="max-width:800px; height:auto;">
+
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">I</span>nsuring your pride and joy is often overlooked. Don't get caught out and check out
+         <a href="#findBrands" type="button" class="wiseColour"> these Bike insurance
+          packages</a> , most of which, cover more than just the bike.
+          Companies such as Yellow Jersey have 3 packages, the Essentials package aimed at leisure riding will cover
+          Bike theft, accidental damage and vandalism.
+          The Performance package is for the enthusiast rider who is part of a club, rides sportives, or takes their
+          bike on trips abroad. Finally, there is the Ultimate package,
+          the rider that competes in the UK or abroad needs cover for their equipment in the pit or transition area or
+          needs public liability should consider looking into this package.
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-top">
+
+      <h1><span class="wiseColour">N</span>utrition</h1>
+      <img src="img/newNutrition.jpg" class="w3-margin w3-hide-small" alt="Person"
+        style="max-width:800px; height:auto;">
+
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">P</span>eanutbutter and Banana on toast with a burning hot cup of tea is a VeloWise
+          post-ride
+          favourite, especially when it's cold. But what about the pre and mid-ride food your body requires for a
+          quality training ride?
+          From energy gels to food prep companies,
+          <a href="#findBrands" type="button" class="wiseColour">here</a> you will find a comprehensive list of places to
+          find things to fill your cakehole, keep you energised and help you recover.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div class="w3-row w3-text-black">
+
+    <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
+      <h1><span class="wiseColour">H</span>olidays</h1>
+      <img src="img/newHoliday.jpg" class="w3-margin" alt="Person" style="width:800px; height:530px;">
+      <div class="w3-padding-large w3-left-align">
+        <p><span class="wiseColour">C</span>ycling holidays. Too few and far between for us at VeloWise, but having the opportunity to ride in another
+          country is a very exciting prospect indeed.
+          Boxing up your bikes and flying to the Alpes or renting bikes in the Dolomites in search of those perfect
+          rides is easier than you think. Or why not try a coast to coast like the LEJOG (Lands end to John O'Groats).
+          These cycling holiday companies specialize in making your trip a breeze. If a week away is not on the cards
+          and rides are starting to become a bit stale, why not try a Micro Adventure. A short (or long) weekend is
+          all you need to get away
+          and ride somewhere new.
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-col l6 w3-padding w3-center w3-border-top">
+      <h1><span class="wiseColour">A</span>ssociations</h1>
+      <img src="img/newAssociations1.jpg" class="w3-margin" alt="Person" style="width:800px; height:530px;">
+      <div class="w3-padding-large w3-left-align">
+        <p class="associations-text" class="">
+          <span class="wiseColour">T</span>here are many cycling associations out there with a range of services and responsibilities. British Cycling
+          is one of, if not, the biggest here in the UK. They have expert advice on almost everything cycling related
+          for beginners to pros.
+          They can point you in the direction of your local club and races. They also offer memberships with extra
+          services, such as a range of insurances and legal support, discounts with popular shops and priority access
+          to cycling events.
+          Other associations like Sustrans are a charity that has been instrumental to building, maintaining and
+          influencing the British cycling network.
+          <a href="#section2" type="button" class="wiseColour">Click here</a> to see the biggest list of cycling
+          associations in the UK.
+        </p>
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-3 w3-display-container w3-opacity-min w3-hide-small">
+    <div class="w3-display-middle">
+      <span class="w3-text-white w3-wide"><a href="#home" class="w3-btn w3-light-grey"><i
+            class="fa fa-arrow-up w3-margin-right"></i>To the top</a></span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="about" class="w3-center w3-black w3-padding-64">
+    <span class="w3-text-white w3-wide w3-hide-medium w3-hide-large"><a href="#home" class="w3-btn w3-light-grey"><i
+          class="fa fa-arrow-up w3-margin-right"></i>To the top</a></span>
+
+    <div class="w3-xlarge w3-section w3-black">
+      <h3 class="w3-center">Follow Us</h3>
+      <a href="https://www.instagram.com/velo_wise/?hl=en"><img class="social-media w3-margin"
+          src="logos/029-instagram.svg" alt="instagram-icon"></a>
+      <a href="https://www.facebook.com/VeloWiseUK/"><img class="social-media w3-margin" src="logos/036-facebook.svg"
+          alt="facebook-icon"></a>
+
+      <p class="w3-center">Created by <a href="https://lucasj01uk.github.io/portfolio/index.html" title="" target=""
+          class="w3-hover-text-blue">Jonathan Lucas</a></p>
+      <p class="w3-center w3-hover-text-blue"><a href="mailto:info@velowise.cc">Contact VeloWise</a></p>
+    </div>
+    <button onclick="document.getElementById('id02').style.display='block'" class="w3-btn w3-hover-text-blue">©
+      Copyright 2020 VeloWise.</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-hover-text-blue">terms and
+      conditions</button>
+    <button onclick="document.getElementById('id03').style.display='block'"
+      class="w3-btn w3-hover-text-blue">Disclaimer</button>
+
+  </footer>
+
+  <!-- Modals! -->
+
+  <div class="w3-container">
+
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <header class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright w3-text-red"><b>X</b></span>
+          <h2 class="w3-text-black w3-center">Terms and Conditions</h2>
+        </header>
+        <div class="w3-container">
+          <div class="terms-and-conditions w3-text-black">
+
+            <p>Welcome to our website. If you continue to browse and use this website,
+              you are agreeing to comply with and be bound by the following terms and
+              conditions of use, which together with our privacy policy govern
+              VeloWise.cc's relationship with you in relation to this website. If you
+              disagree with any part of these terms and conditions, please do not use our
+              website.</p>
+
+            <p>
+              The term 'VeloWise.cc' or 'us' or 'we' refers to the owner of the
+              website whose registered office is [coming soon]. Our company registration
+              number is [company registration number and place of registration coming soon].
+              The term 'you' refers to the user or viewer of our website.</p>
+
+            <p>The use of this website is subject to the following terms of use:</p>
+            <ul>
+              <li>
+                The content of the pages of this website is for your general information
+                and use only. It is subject to change without notice.
+              </li>
+              <li>
+                This website uses cookies to monitor browsing preferences. If you do allow
+                cookies to be used, the following personal information may be stored by us
+                for use by third parties
+              </li>
+              <li>
+                Neither we nor any third parties provide any warranty or guarantee as to the
+                accuracy, timeliness, performance, completeness or suitability of the
+                information and materials found or offered on this website for any
+                particular purpose.
+              </li>
+              <li>
+                You
+                acknowledge that such information and materials may contain inaccuracies or
+                errors and we expressly exclude liability for any such inaccuracies or
+                errors to the fullest extent permitted by law.
+              </li>
+
+              <li>
+                Your use of any information or materials on this website is entirely at
+                your own risk, for which we shall not be liable. It shall be your own
+                responsibility to ensure that any products, services or information
+                available through this website meet your specific requirements.
+
+              </li>
+              <li>
+                This website contains material which is owned by or licensed to us.
+                This material includes, but is not limited to, the design, layout, look,
+                appearance and graphics. Reproduction is prohibited other than in accordance
+                with the copyright notice, which forms part of these terms and conditions.
+              </li>
+              <li>
+                All trade marks reproduced in this website which are not the property of, or
+                licensed to, the operator are acknowledged on the website.
+              </li>
+              <li>
+                Unauthorised use of this website may give rise to a claim for damages and/or
+                be a criminal offence.
+              </li>
+              <li>
+                From time to time this website may also include links to other websites.
+                These links are provided for your convenience to provide further information.
+                They do not signify that we endorse the website(s). We have no responsibility
+                for the content of the linked website(s).
+              </li>
+              <li>
+                Your use of this website and any dispute arising out of such use of the
+                website is subject to the laws of England, Northern Ireland, Scotland and Wales.
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container">
+
+    <div id="id02" class="w3-modal">
+      <div class="w3-modal-content w3-text-black">
+        <header class="w3-container w3-center ">
+          <span onclick="document.getElementById('id02').style.display='none'"
+            class="w3-button w3-display-topright w3-text-red"><b>X</b></span>
+          <h2>Copyright</h2>
+        </header>
+        <div class="w3-container">
+
+          <p>
+            This website and its content is copyright of VeloWise.cc -
+            © VeloWise.cc 2020. All rights reserved.
+          </p>
+          <p>
+            Any redistribution or reproduction of part or all of the contents in any form
+            is prohibited other than the following:
+          </p>
+
+          <ul>
+            <li>
+              you may print or download to a local hard disk extracts for your personal and
+              non-commercial use only.
+            </li>
+            <li>
+              you may copy the content to individual third parties for their personal use,
+              but only if you acknowledge the website as the source of the material.
+            </li>
+          </ul>
+
+          <p>
+            You may not, except with our express written permission, distribute or
+            commercially exploit the content. Nor may you transmit it or store it in any
+            other website or other form of electronic retrieval system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container">
+
+    <div id="id03" class="w3-modal">
+      <div class="w3-modal-content w3-text-black">
+        <header class="w3-container">
+          <span onclick="document.getElementById('id03').style.display='none'"
+            class="w3-button w3-display-topright w3-text-red"><b>X</b></span>
+          <h2 class="w3-center">Disclaimer</h2>
+        </header>
+        <div class="w3-container">
+
+
+          <p>
+            The information contained in this website is for general information purposes
+            only. The information is provided by VeloWise.cc and while we endeavour to
+            keep the information up to date and correct, we make no representations or
+            warranties of any kind, express or implied, about the completeness, accuracy,
+            reliability, suitability or availability with respect to the website or the
+            information, products, services, or related graphics contained on the website
+            for any purpose. Any reliance you place on such information is therefore
+            strictly at your own risk.
+          </p>
+
+          <p>
+            In no event will we be liable for any loss or damage including without
+            limitation, indirect or consequential loss or damage, or any loss or damage
+            whatsoever arising from loss of data or profits arising out of, or in
+            connection with, the use of this website.
+          </p>
+
+          <p>
+            Through this website you are able to link to other websites which are not
+            under the control of VeloWise.cc. We have no control over the nature,
+            content and availability of those sites. The inclusion of any links does
+            not necessarily imply a recommendation or endorse the views expressed
+            within them.
+          </p>
+
+          <p>
+            Every effort is made to keep the website up and running smoothly. However,
+            VeloWise.cc takes no responsibility for, and will not be liable for, the
+            website being temporarily unavailable due to technical issues beyond our
+            control.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+
+</body>
+
+</html>
