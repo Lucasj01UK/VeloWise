@@ -23,60 +23,22 @@
       }
   
   // document.getElementById('button1').addEventListener('click', loadCustomer);  
-  
   document.getElementById('button2').addEventListener('click', loadAllBrands);
-  document.getElementById('button3').addEventListener('click', getBikes);
-  
+  document.getElementById('button3').addEventListener('click', getBikes);  
   document.getElementById('button4').addEventListener('click', getAcc);
   document.getElementById('button5').addEventListener('click', getComponent);
   document.getElementById('button6').addEventListener('click', getClothing);
   //document.getElementById('button7').addEventListener('click', getHoliday);
   document.getElementById('button8').addEventListener('click', getInsurance);
   document.getElementById('button9').addEventListener('click', getNutrition);
-  // document.getElementById('button10').addEventListener('click', getAssociation);
-  // document.getElementById('button11').addEventListener('click', getComingSoon)
-  
-  // document.getElementById('button1').addEventListener('click', getDefultText);
-  
-  // Load 1 customer
-  // function loadCustomer(e) {
-  //   const xhr = new XMLHttpRequest();
-  
-  //   xhr.open('GET', 'customer.json', true);
-  
-  //   xhr.onload = function() {
-  //     if(this.status === 200) {
-  
-  //       const customer = JSON.parse(this.responseText);
-  
-  //       const output = `
-  //         <ul>
-  //           <li>${customer.company}</li>
-  //           <li>Company Web Address: <a href="url">${customer.webAddress}</a></li>
-  //           <li>Company Location: ${customer.location}</li>
-  //           <li>Company Tag Line: ${customer.tagLine}</li>
-  //         </ul>
-  //         `;
-  //         document.getElementById('output').innerHTML = output;
-  //     }
-  //   }  
-  //   xhr.send();
-  // };
+
   
   // Load Default outputs
   function getDefultText() {
     document.getElementById('output').innerHTML = `<div class="w3-display-container w3-display-middle">
       <h4 class="tagLine w3-center w3-margin-top">Velo<span class="wiseColour">Wise</span>.cc | The Top 3 Brands This Month
       cycling-specific companies.<br>Building brand awareness for the UK's cycling community.<br></h4>
-      </div>     
-      
-    `
-    // document.getElementById('artical').innerHTML = `
-    // <div class="articalText">
-    //   <p>*** VELOWISE RECOMENDS! ***</p>
-    //   <p>Top Brand</p>
-    // </div>
-    // `;
+      </div>`
   };
   
   // Load all Brands

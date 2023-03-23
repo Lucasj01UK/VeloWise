@@ -75,23 +75,18 @@ body,
   #output {
     height: 635px;
     overflow-y: auto;
+    width: 70%;
+    margin: 10px auto;
+    border-left: 15px solid lightgray;
+    
+  }
+
+  .jsSection{
     background-image: radial-gradient(circle farthest-corner at 48.5% 52.3%, rgba(58, 58, 58, 1) 0%, rgba(25, 25, 25, 1) 76%);
   }
 
-  /* #ADVERTISMENT {
-    height: 635px;
-    background-image: radial-gradient(circle farthest-corner at 48.5% 52.3%, rgba(58, 58, 58, 1) 0%, rgba(25, 25, 25, 1) 76%);
-  } */
-
-  /* @media (max-height: 700px) {
-    #ADVERTISMENT {
-      height: 200px;
-    }
-  } */
-
   #artical {
     color: white;
-    /* width: 95%; */
     height: 150px;
     top: 40%;
     background-image: radial-gradient(circle farthest-corner at 48.5% 52.3%, rgba(58, 58, 58, 1) 0%, rgba(25, 25, 25, 1) 76%);
@@ -100,9 +95,6 @@ body,
   .social-media {
     width: 2%;
     height: 2%;
-    /* margin-bottom: 0;
-    margin-left: 0;
-    padding: 0; */
   }
 
   @media (max-width:900px) {
@@ -111,19 +103,3 @@ body,
       height:10%;
     }
   }
-
-  /* button#button4:focus {
-    background-color: black!important;
-    color: white!important;
-   } */
-
-  /* Turn off parallax scrolling for tablets and phones */
-  /* @media only screen and (max-device-width: 1600px) {
-
-    .bgimg-1,
-    .bgimg-2,
-    .bgimg-3 {
-      background-attachment: scroll;
-      min-height: 400px;
-    }
-  } */

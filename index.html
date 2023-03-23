@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>VeloWise.cc</title>
   <meta charset="UTF-8">
@@ -9,285 +10,230 @@
   <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/57b4dd3693.js" crossorigin="anonymous"></script>
+  <!-- custom css -->
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="VeloWise.cc - The UK's most comprehensive database of British bikes, clothing, insurance, accessories and nutrition.">
-  <meta name="keywords" content="british, cycling, brands, british bikes, british brands, british cycling brands, road cycling,mountain biking, bike packing, cyclecross">
+
+  <meta name="description"
+    content="VeloWise.cc - The UK's most comprehensive database of British bikes, clothing, insurance, accessories and nutrition.">
+  <meta name="keywords"
+    content="british, cycling, brands, british bikes, british brands, british cycling brands, road cycling,mountain biking, bike packing, cyclecross">
   <meta name="robots" content="index,follow">
   <link rel="icon" href="favicon.ico">
-  <!--<script data-ad-client="ca-pub-6699362050131330" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 </head>
 
 <body onload="getBikes()">
 
-  <!-- Navbar Large screens (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-btn w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
-        onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="#home" class="w3-bar-item w3-btn">HOME</a>
-      <a href="#findBrands" class="w3-bar-item w3-btn w3-hide-small">FIND BRANDS</a>
-      <a href="#articles" class="w3-bar-item w3-btn w3-hide-small">ARTICLES</a>
-      <a href="#about" class="w3-bar-item w3-btn w3-hide-small">ABOUT</a>
-      <!-- <a href="#about" class="w3-bar-item w3-btn w3-hide-small">ABOUT</a> -->
+    <!-- Navbar Large screens (sit on top) -->
+    <nav class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-btn w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+          onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-btn">HOME</a>
+        <a href="#findBrands" class="w3-bar-item w3-btn w3-hide-small">FIND BRANDS</a>
+        <a href="#articles" class="w3-bar-item w3-btn w3-hide-small">ARTICLES</a>
+        <a href="#about" class="w3-bar-item w3-btn w3-hide-small">ABOUT</a>
 
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#findBrands" class="w3-bar-item w3-btn" onclick="toggleFunction()">Find Brands</a>
+        <a href="#articles" class="w3-bar-item w3-btn" onclick="toggleFunction()">Articles</a>
+        <a href="#about" class="w3-bar-item w3-btn" onclick="toggleFunction()">About</a>
+      </div>
+    </nav>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container" id="home">
+      <div class="w3-display-middle w3-center" style="white-space:nowrap;">
+        <h1><span class="w3-wide w3-animate-opacity w3-text-white">Velo<span class="wiseColour">Wise</span>.cc</span>
+        </h1>
+        <h4 class="tagLine w3-animate-opacity w3-mobile w3-hide-small w3-hide-medium">Welcome to Velo<span
+            class="wiseColour">Wise</span>.cc | The most comprehensive Database of UK
+          cycling-specific companies.</h4>
+        <h4 class="tagLine w3-animate-opacity w3-hide-small">Building brand awareness for the cycling community.</h4>
+      </div>
     </div>
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#findBrands" class="w3-bar-item w3-btn" onclick="toggleFunction()">Find Brands</a>
-      <a href="#articles" class="w3-bar-item w3-btn" onclick="toggleFunction()">Articles</a>
-      <a href="#about" class="w3-bar-item w3-btn" onclick="toggleFunction()">About</a>
-      <!-- <a href="#about" class="w3-bar-item w3-btn" onclick="toggleFunction()">About</a> -->
-    </div>
-  </div>
+    <section class="w3-display-container w3-center">
+      <!-- Mobile Tagline -->
+      <div class="w3-display">
+        <h5 class="tagLine w3-animate-opacity w3-mobile w3-hide-large" style="margin:0; background-color: #303030;">
+          Welcome to Velo<span class="wiseColour">Wise</span>.cc | The most comprehensive Database of UK
+          cycling-specific companies.</h5>
+        <h5 class="tagLine w3-animate-opacity w3-mobile w3-hide-large" style="margin:0; background-color: #303030;">
+          Building brand awareness for the cycling
+          community.</h5>
+      </div>
 
-  <!-- First Parallax Image with Logo Text -->
-  <div class="bgimg-1 w3-display-container" id="home">  
-    <div class="w3-display-middle w3-center" style="white-space:nowrap;">
-      <h1><span class="w3-wide w3-animate-opacity w3-text-white">Velo<span class="wiseColour">Wise</span>.cc</span></h1>
-      <h4 class="tagLine w3-animate-opacity w3-mobile w3-hide-small w3-hide-medium">Welcome to Velo<span
-          class="wiseColour">Wise</span>.cc | The most comprehensive Database of UK
-        cycling-specific companies.</h4>
-      <h4 class="tagLine w3-animate-opacity w3-hide-small">Building brand awareness for the cycling community.</h4>
-    </div>
-  </div>
-
-  <div class="w3-display-container w3-center">
-    <!-- Mobile Tagline -->
-    <div class="w3-display">
-      <h5 class="tagLine w3-animate-opacity w3-mobile w3-hide-large" style="margin:0; background-color: #303030;">
-        Welcome to Velo<span class="wiseColour">Wise</span>.cc | The most comprehensive Database of UK
-        cycling-specific companies.</h5>
-      <h5 class="tagLine w3-animate-opacity w3-mobile w3-hide-large" style="margin:0; background-color: #303030;">
-        Building brand awareness for the cycling
-        community.</h5>
-    </div>
-
-    <div class="bgimg-2 w3-display-container" id="findBrands">
-      <div class="w3-display" style="padding-top: 5%;">
-        <div class="w3-bar w3-padding w3-center">
-          <!-- <button id="button1"
+      <div class="bgimg-2 w3-display-container" id="findBrands">
+        <div class="w3-display" style="padding-top: 5%;">
+          <div class="w3-bar w3-padding w3-center">
+            <!-- <button id="button1"
             class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile homeBtn">
             <b>V<span class="wiseColour">W</span>.CC</b></button> -->
-          <button id="button3"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">B</span>ikes</b></button>
-          <button id="button4"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">A</span>ccessories</b></button>
-          <button id="button5"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">C</span>omponents</b></button>
-          <button id="button6"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">C</span>lothing</b></button>
-          <button id="button9"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">N</span>utrition</b></button>
-          <button id="button8"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">I</span>nsurance</b></button>
-          <button id="button2"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-            <b><span class="wiseColour">A</span>ll <span class="wiseColour">B</span>rand</b></button>
-          
-          <!-- <button id="button7"
-            class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
-           <b><span class="wiseColour">H</span>olidays</b></button> -->
-          <!-- <button id="button10"
-          class="w3-btn w3-white w3-large w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple">
-          <span class="wiseColour">A</span>ssociations</button> -->
-          <!-- <button id="button11"
-          class="w3-btn w3-white w3-large w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple">
-          <span class="wiseColour">E</span>uro <span class="wiseColour">B</span>rands</button>         -->
-          <!-- <hr> -->
+            <button id="button3"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">B</span>ikes</b></button>
+            <button id="button4"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">A</span>ccessories</b></button>
+            <button id="button5"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">C</span>omponents</b></button>
+            <button id="button6"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">C</span>lothing</b></button>
+            <button id="button9"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">N</span>utrition</b></button>
+            <button id="button8"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">I</span>nsurance</b></button>
+            <button id="button2"
+              class="w3-btn w3-large w3-white w3-wide w3-border w3-border-black w3-round w3-padding-small w3-ripple w3-mobile">
+              <b><span class="wiseColour">A</span>ll <span class="wiseColour">B</span>rand</b></button>
+
+          </div>
+        </div>
+      </div>
+
+      <!--!!! APP.JS STARTS HERE !!!-->
+      <div class="w3-row jsSection">
+        <div id="output" class="w3-container">
+          <!-- app.js -->
+        </div>
+      </div>
+
+    </section>
+
+  <br>
+
+  <section>
+    <!-- articles -->
+    <div class="w3-row w3-text-black" id="articles">
+
+      <div class="w3-col l6 w3-center w3-padding w3-border-right w3-border-top">
+        <h1><span class="wiseColour">B</span>ikes</h1>
+        <img src="img/newBikes.jpg" class="w3-margin w3-hide-small" alt="bike-img"
+          style="max-width:800px; height:auto;">
+        <div class="w3-padding-large w3-left-align">
+          <p><span class="wiseColour">T</span>here is a vast array of bicycle brands around the globe, 
+            and it's hard to get away from the well-established
+            powerhouses. Giant, Specialized and Cannondale are fantastic brands but, you see them everywhere.
+            Riding solo or in a club, spotting another one is almost certain. Seldom you will feast your eyes upon an
+            ORRO, Field or Enigma. These steeds are rare indeed, but can be found at similar prices and are just as
+            reliable, beautiful and
+            obtainable.
+            <a href="#findBrands" type="button" class="wiseColour">Click here</a>
+            to see the biggest list of British Bicycle brands and frame builders.</p>
+        </div>
+      </div>
+
+      <div class="w3-col l6 w3-center w3-padding w3-border-top ">
+        <h1><span class="wiseColour">A</span>ccessories</h1>
+        <img src="img/newAccessories.jpg" class="w3-margin w3-hide-small" alt="acessories-img"
+          style="max-width:800px; height:auto;">
+        <div class="w3-padding-large w3-left-align">
+          <p><span class="wiseColour">C</span>ycling accessories. The essential kit you need to aid your commute,
+            training
+            or race. To
+            make your weekend away in the wilderness more comfortable. The items you must have to separate your bike
+            from the crowd. Accessorising your bike is great fun and can cost very little.
+            <a href="#findBrands" type="button" class="wiseColour">Click
+              here</a> to see the biggest range of British cycling accessories.
+          </p>
         </div>
       </div>
     </div>
 
-    <!--!!! APP.JS STARTS HERE !!!-->
-    <div class="w3-row">
-      <div class="w3-col l2 s12 w3-hide-small" id="ADVERTISMENT">
-        <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-        <!-- test ads -->
-        <!--<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6699362050131330"-->
-        <!--  data-ad-slot="7152013350" data-ad-format="auto" data-full-width-responsive="true"></ins>-->
-        <!--<script>-->
-        <!--  (adsbygoogle = window.adsbygoogle || []).push({});-->
-        <!--</script>-->
+    <div class="w3-row w3-text-black">
+
+      <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
+        <h1><span class="wiseColour">C</span>omponents</h1>
+        <img src="img/components1.jpg" class="w3-margin w3-hide-small" alt="Person"
+          style="max-width:800px; height:auto;">
+
+        <div class="w3-padding-large w3-left-align">
+          <p><span class="wiseColour">C</span>omponents, critical parts that make the machine. Without them, we are
+            going
+            nowhere.
+            <a href="#findBrands" type="button" class="wiseColour">Here</a> is a list of almost all bicycle components
+            that
+            are owned by British companies.
+            A favourite for us here at VeloWise is HOPE. They truly stand out as market leaders. Almost all their
+            products
+            are made on-site in Barnoldswick, Lancashire. Their products are renowned for being robust, affordable and
+            reliable.
+            A true testament to British engineering.
+          </p>
+        </div>
       </div>
 
-      <div id="output" class="w3-card w3-border w3-container w3-mobile w3-center w3-col">
-        <!-- app.js -->
-      </div>
+      <div class="w3-col l6 w3-center w3-padding w3-border-top">
+        <h1><span class="wiseColour">C</span>lothing</h1>
+        <img src="img/newClothing.jpg" class="w3-margin w3-hide-small" alt="Person"
+          style="max-width:800px; height:auto;">
 
-      <div class="w3-col l2 s12 w3-hide-small" id="ADVERTISMENT">
-        <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-        <!-- test ads -->
-        <!--<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6699362050131330"-->
-        <!--  data-ad-slot="7152013350" data-ad-format="auto" data-full-width-responsive="true"></ins>-->
-        <!--<script>-->
-        <!--  (adsbygoogle = window.adsbygoogle || []).push({});-->
-        <!--</script>-->
-      </div>
-
-    </div>
-
-  </div>
-
-  <br>
-
-  <!-- articles -->
-  <div class="w3-row w3-text-black" id="articles">
-
-    <div class="w3-col l6 w3-center w3-padding w3-border-right w3-border-top">
-      <h1><span class="wiseColour">B</span>ikes</h1>
-      <img src="img/newBikes.jpg" class="w3-margin w3-hide-small" alt="bike-img" style="max-width:800px; height:auto;">
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">T</span>here is a vast array of bicycle brands around the globe, and it's hard to
-          get away from the well-established
-          powerhouses. Giant, Specialized and Cannondale are fantastic brands but, you see them everywhere.
-          Riding solo or in a club, spotting another one is almost certain. Seldom you will feast your eyes upon an
-          ORRO, Field or Enigma. These steeds are rare indeed, but can be found at similar prices and are just as
-          reliable, beautiful and
-          obtainable.
-          <a href="#findBrands" type="button" class="wiseColour">Click here</a>
-          to see the biggest list of British Bicycle brands and frame builders.</p>
+        <div class="w3-padding-large w3-left-align">
+          <p><span class="wiseColour">W</span>hile compiling this list of cycling apparel companies, I was astonished at
+            how many there
+            were, how obscure they are, and how hard it is to pin down where they are based and made. I have found over
+            fifty already with more being added every month. <a href="#findBrands" type="button"
+              class="wiseColour">Click
+              here</a>
+            to see the biggest list of cycling clothing brands based here in the UK.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="w3-col l6 w3-center w3-padding w3-border-top ">
-      <h1><span class="wiseColour">A</span>ccessories</h1>
-      <img src="img/newAccessories.jpg" class="w3-margin w3-hide-small" alt="acessories-img"
-        style="max-width:800px; height:auto;">
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">C</span>ycling accessories. The essential kit you need to aid your commute, training
-          or race. To
-          make your weekend away in the wilderness more comfortable. The items you must have to separate your bike
-          from the crowd. Accessorising your bike is great fun and can cost very little.
-          <a href="#findBrands" type="button" class="wiseColour">Click
-            here</a> to see the biggest range of British cycling accessories.
-        </p>
+    <div class="w3-row w3-text-black">
+
+      <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
+
+        <h1><span class="wiseColour">I</span>nsurance</h1>
+        <img src="img/newInsurance.jpg" class="w3-margin w3-hide-small" alt="Person"
+          style="max-width:800px; height:auto;">
+
+        <div class="w3-padding-large w3-left-align">
+          <p><span class="wiseColour">I</span>nsuring your pride and joy is often overlooked. Don't get caught out and
+            check out
+            <a href="#findBrands" type="button" class="wiseColour"> these Bike insurance
+              packages</a> , most of which, cover more than just the bike.
+            Companies such as Yellow Jersey have 3 packages, the Essentials package aimed at leisure riding will cover
+            Bike theft, accidental damage and vandalism.
+            The Performance package is for the enthusiast rider who is part of a club, rides sportives, or takes their
+            bike on trips abroad. Finally, there is the Ultimate package,
+            the rider that competes in the UK or abroad needs cover for their equipment in the pit or transition area or
+            needs public liability should consider looking into this package.
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="w3-row w3-text-black">
+      <div class="w3-col l6 w3-center w3-padding w3-border-top">
 
-    <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
-      <h1><span class="wiseColour">C</span>omponents</h1>
-      <img src="img/components1.jpg" class="w3-margin w3-hide-small" alt="Person" style="max-width:800px; height:auto;">
+        <h1><span class="wiseColour">N</span>utrition</h1>
+        <img src="img/newNutrition.jpg" class="w3-margin w3-hide-small" alt="Person"
+          style="max-width:800px; height:auto;">
 
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">C</span>omponents, critical parts that make the machine. Without them, we are going
-          nowhere.
-          <a href="#findBrands" type="button" class="wiseColour">Here</a> is a list of almost all bicycle components that
-          are owned by British companies.
-          A favourite for us here at VeloWise is HOPE. They truly stand out as market leaders. Almost all their products
-          are made on-site in Barnoldswick, Lancashire. Their products are renowned for being robust, affordable and
-          reliable.
-          A true testament to British engineering.
-        </p>
-      </div>
-    </div>
-
-    <div class="w3-col l6 w3-center w3-padding w3-border-top">
-      <h1><span class="wiseColour">C</span>lothing</h1>
-      <img src="img/newClothing.jpg" class="w3-margin w3-hide-small" alt="Person" style="max-width:800px; height:auto;">
-
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">W</span>hile compiling this list of cycling apparel companies, I was astonished at
-          how many there
-          were, how obscure they are, and how hard it is to pin down where they are based and made. I have found over
-          fifty already with more being added every month. <a href="#findBrands" type="button" class="wiseColour">Click
-            here</a>
-          to see the biggest list of cycling clothing brands based here in the UK.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-row w3-text-black">
-
-    <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
-
-      <h1><span class="wiseColour">I</span>nsurance</h1>
-      <img src="img/newInsurance.jpg" class="w3-margin w3-hide-small" alt="Person"
-        style="max-width:800px; height:auto;">
-
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">I</span>nsuring your pride and joy is often overlooked. Don't get caught out and check out
-         <a href="#findBrands" type="button" class="wiseColour"> these Bike insurance
-          packages</a> , most of which, cover more than just the bike.
-          Companies such as Yellow Jersey have 3 packages, the Essentials package aimed at leisure riding will cover
-          Bike theft, accidental damage and vandalism.
-          The Performance package is for the enthusiast rider who is part of a club, rides sportives, or takes their
-          bike on trips abroad. Finally, there is the Ultimate package,
-          the rider that competes in the UK or abroad needs cover for their equipment in the pit or transition area or
-          needs public liability should consider looking into this package.
-        </p>
-      </div>
-    </div>
-
-    <div class="w3-col l6 w3-center w3-padding w3-border-top">
-
-      <h1><span class="wiseColour">N</span>utrition</h1>
-      <img src="img/newNutrition.jpg" class="w3-margin w3-hide-small" alt="Person"
-        style="max-width:800px; height:auto;">
-
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">P</span>eanutbutter and Banana on toast with a burning hot cup of tea is a VeloWise
-          post-ride
-          favourite, especially when it's cold. But what about the pre and mid-ride food your body requires for a
-          quality training ride?
-          From energy gels to food prep companies,
-          <a href="#findBrands" type="button" class="wiseColour">here</a> you will find a comprehensive list of places to
-          find things to fill your cakehole, keep you energised and help you recover.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- <div class="w3-row w3-text-black">
-
-    <div class="w3-col l6 w3-center w3-padding w3-border-top w3-border-right">
-      <h1><span class="wiseColour">H</span>olidays</h1>
-      <img src="img/newHoliday.jpg" class="w3-margin" alt="Person" style="width:800px; height:530px;">
-      <div class="w3-padding-large w3-left-align">
-        <p><span class="wiseColour">C</span>ycling holidays. Too few and far between for us at VeloWise, but having the opportunity to ride in another
-          country is a very exciting prospect indeed.
-          Boxing up your bikes and flying to the Alpes or renting bikes in the Dolomites in search of those perfect
-          rides is easier than you think. Or why not try a coast to coast like the LEJOG (Lands end to John O'Groats).
-          These cycling holiday companies specialize in making your trip a breeze. If a week away is not on the cards
-          and rides are starting to become a bit stale, why not try a Micro Adventure. A short (or long) weekend is
-          all you need to get away
-          and ride somewhere new.
-        </p>
-      </div>
-    </div>
-
-    <div class="w3-col l6 w3-padding w3-center w3-border-top">
-      <h1><span class="wiseColour">A</span>ssociations</h1>
-      <img src="img/newAssociations1.jpg" class="w3-margin" alt="Person" style="width:800px; height:530px;">
-      <div class="w3-padding-large w3-left-align">
-        <p class="associations-text" class="">
-          <span class="wiseColour">T</span>here are many cycling associations out there with a range of services and responsibilities. British Cycling
-          is one of, if not, the biggest here in the UK. They have expert advice on almost everything cycling related
-          for beginners to pros.
-          They can point you in the direction of your local club and races. They also offer memberships with extra
-          services, such as a range of insurances and legal support, discounts with popular shops and priority access
-          to cycling events.
-          Other associations like Sustrans are a charity that has been instrumental to building, maintaining and
-          influencing the British cycling network.
-          <a href="#section2" type="button" class="wiseColour">Click here</a> to see the biggest list of cycling
-          associations in the UK.
-        </p>
+        <div class="w3-padding-large w3-left-align">
+          <p><span class="wiseColour">P</span>eanutbutter and Banana on toast with a burning hot cup of tea is a
+            VeloWise
+            post-ride
+            favourite, especially when it's cold. But what about the pre and mid-ride food your body requires for a
+            quality training ride?
+            From energy gels to food prep companies,
+            <a href="#findBrands" type="button" class="wiseColour">here</a> you will find a comprehensive list of places
+            to
+            find things to fill your cakehole, keep you energised and help you recover.</p>
+        </div>
       </div>
 
     </div>
-  </div> -->
+  </section>
 
   <!-- Third Parallax Image with Portfolio Text -->
   <div class="bgimg-3 w3-display-container w3-opacity-min w3-hide-small">
@@ -501,7 +447,7 @@
       </div>
     </div>
   </div>
-  
+
   <script src="app.js"></script>
 
 </body>
